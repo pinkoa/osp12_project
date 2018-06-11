@@ -1,0 +1,66 @@
+# Generated with the following on 2018-05-25T11:28:20.264380
+#
+#   openstack overcloud container image prepare --namespace=registry.access.redhat.com/rhosp12 --prefix=openstack- --tag=12.0-20180519.1 -e /usr/share/openstack-tripleo-heat-templates/environments/ceph-ansible/ceph-ansible.yaml --set ceph_namespace=registry.access.redhat.com/rhceph --set ceph_image=rhceph-2-rhel7 --set ceph_tag=4 --output-env-file=/home/stack/templates/overcloud_images.yaml
+#
+
+parameter_defaults:
+  DockerAodhApiImage: registry.access.redhat.com/rhosp12/openstack-aodh-api:12.0-20180519.1
+  DockerAodhConfigImage: registry.access.redhat.com/rhosp12/openstack-aodh-api:12.0-20180519.1
+  DockerAodhEvaluatorImage: registry.access.redhat.com/rhosp12/openstack-aodh-evaluator:12.0-20180519.1
+  DockerAodhListenerImage: registry.access.redhat.com/rhosp12/openstack-aodh-listener:12.0-20180519.1
+  DockerAodhNotifierImage: registry.access.redhat.com/rhosp12/openstack-aodh-notifier:12.0-20180519.1
+  DockerCeilometerCentralImage: registry.access.redhat.com/rhosp12/openstack-ceilometer-central:12.0-20180519.1
+  DockerCeilometerComputeImage: registry.access.redhat.com/rhosp12/openstack-ceilometer-compute:12.0-20180519.1
+  DockerCeilometerConfigImage: registry.access.redhat.com/rhosp12/openstack-ceilometer-central:12.0-20180519.1
+  DockerCeilometerNotificationImage: registry.access.redhat.com/rhosp12/openstack-ceilometer-notification:12.0-20180519.1
+  DockerCephDaemonImage: registry.access.redhat.com/rhceph/rhceph-2-rhel7:4
+  DockerClustercheckConfigImage: registry.access.redhat.com/rhosp12/openstack-mariadb:12.0-20180519.1
+  DockerClustercheckImage: registry.access.redhat.com/rhosp12/openstack-mariadb:12.0-20180519.1
+  DockerCrondConfigImage: registry.access.redhat.com/rhosp12/openstack-cron:12.0-20180519.1
+  DockerCrondImage: registry.access.redhat.com/rhosp12/openstack-cron:12.0-20180519.1
+  DockerGlanceApiConfigImage: registry.access.redhat.com/rhosp12/openstack-glance-api:12.0-20180519.1
+  DockerGlanceApiImage: registry.access.redhat.com/rhosp12/openstack-glance-api:12.0-20180519.1
+  DockerGnocchiApiImage: registry.access.redhat.com/rhosp12/openstack-gnocchi-api:12.0-20180519.1
+  DockerGnocchiConfigImage: registry.access.redhat.com/rhosp12/openstack-gnocchi-api:12.0-20180519.1
+  DockerGnocchiMetricdImage: registry.access.redhat.com/rhosp12/openstack-gnocchi-metricd:12.0-20180519.1
+  DockerGnocchiStatsdImage: registry.access.redhat.com/rhosp12/openstack-gnocchi-statsd:12.0-20180519.1
+  DockerHAProxyConfigImage: registry.access.redhat.com/rhosp12/openstack-haproxy:12.0-20180519.1
+  DockerHAProxyImage: registry.access.redhat.com/rhosp12/openstack-haproxy:12.0-20180519.1
+  DockerHeatApiCfnConfigImage: registry.access.redhat.com/rhosp12/openstack-heat-api-cfn:12.0-20180519.1
+  DockerHeatApiCfnImage: registry.access.redhat.com/rhosp12/openstack-heat-api-cfn:12.0-20180519.1
+  DockerHeatApiConfigImage: registry.access.redhat.com/rhosp12/openstack-heat-api:12.0-20180519.1
+  DockerHeatApiImage: registry.access.redhat.com/rhosp12/openstack-heat-api:12.0-20180519.1
+  DockerHeatConfigImage: registry.access.redhat.com/rhosp12/openstack-heat-api:12.0-20180519.1
+  DockerHeatEngineImage: registry.access.redhat.com/rhosp12/openstack-heat-engine:12.0-20180519.1
+  DockerHorizonConfigImage: registry.access.redhat.com/rhosp12/openstack-horizon:12.0-20180519.1
+  DockerHorizonImage: registry.access.redhat.com/rhosp12/openstack-horizon:12.0-20180519.1
+  DockerKeystoneConfigImage: registry.access.redhat.com/rhosp12/openstack-keystone:12.0-20180519.1
+  DockerKeystoneImage: registry.access.redhat.com/rhosp12/openstack-keystone:12.0-20180519.1
+  DockerMemcachedConfigImage: registry.access.redhat.com/rhosp12/openstack-memcached:12.0-20180519.1
+  DockerMemcachedImage: registry.access.redhat.com/rhosp12/openstack-memcached:12.0-20180519.1
+  DockerMysqlClientConfigImage: registry.access.redhat.com/rhosp12/openstack-mariadb:12.0-20180519.1
+  DockerMysqlConfigImage: registry.access.redhat.com/rhosp12/openstack-mariadb:12.0-20180519.1
+  DockerMysqlImage: registry.access.redhat.com/rhosp12/openstack-mariadb:12.0-20180519.1
+  DockerNovaApiImage: registry.access.redhat.com/rhosp12/openstack-nova-api:12.0-20180519.1
+  DockerNovaComputeImage: registry.access.redhat.com/rhosp12/openstack-nova-compute:12.0-20180519.1
+  DockerNovaConductorImage: registry.access.redhat.com/rhosp12/openstack-nova-conductor:12.0-20180519.1
+  DockerNovaConfigImage: registry.access.redhat.com/rhosp12/openstack-nova-api:12.0-20180519.1
+  DockerNovaConsoleauthImage: registry.access.redhat.com/rhosp12/openstack-nova-consoleauth:12.0-20180519.1
+  DockerNovaLibvirtConfigImage: registry.access.redhat.com/rhosp12/openstack-nova-compute:12.0-20180519.1
+  DockerNovaLibvirtImage: registry.access.redhat.com/rhosp12/openstack-nova-libvirt:12.0-20180519.1
+  DockerNovaMetadataImage: registry.access.redhat.com/rhosp12/openstack-nova-api:12.0-20180519.1
+  DockerNovaPlacementConfigImage: registry.access.redhat.com/rhosp12/openstack-nova-placement-api:12.0-20180519.1
+  DockerNovaPlacementImage: registry.access.redhat.com/rhosp12/openstack-nova-placement-api:12.0-20180519.1
+  DockerNovaSchedulerImage: registry.access.redhat.com/rhosp12/openstack-nova-scheduler:12.0-20180519.1
+  DockerNovaVncProxyImage: registry.access.redhat.com/rhosp12/openstack-nova-novncproxy:12.0-20180519.1
+  DockerPankoApiImage: registry.access.redhat.com/rhosp12/openstack-panko-api:12.0-20180519.1
+  DockerPankoConfigImage: registry.access.redhat.com/rhosp12/openstack-panko-api:12.0-20180519.1
+  DockerRabbitmqConfigImage: registry.access.redhat.com/rhosp12/openstack-rabbitmq:12.0-20180519.1
+  DockerRabbitmqImage: registry.access.redhat.com/rhosp12/openstack-rabbitmq:12.0-20180519.1
+  DockerRedisConfigImage: registry.access.redhat.com/rhosp12/openstack-redis:12.0-20180519.1
+  DockerRedisImage: registry.access.redhat.com/rhosp12/openstack-redis:12.0-20180519.1
+  DockerSwiftAccountImage: registry.access.redhat.com/rhosp12/openstack-swift-account:12.0-20180519.1
+  DockerSwiftConfigImage: registry.access.redhat.com/rhosp12/openstack-swift-proxy-server:12.0-20180519.1
+  DockerSwiftContainerImage: registry.access.redhat.com/rhosp12/openstack-swift-container:12.0-20180519.1
+  DockerSwiftObjectImage: registry.access.redhat.com/rhosp12/openstack-swift-object:12.0-20180519.1
+  DockerSwiftProxyImage: registry.access.redhat.com/rhosp12/openstack-swift-proxy-server:12.0-20180519.1
